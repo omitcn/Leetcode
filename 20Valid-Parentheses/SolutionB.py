@@ -7,13 +7,10 @@ class Solution:
         if len(s) % 2 == 1:
             return False
         list1 = list(s)
-        len1 = len(s)
         list2 = list()
-        cnt = 0
         list3 = {')': '(', ']': '[', '}': '{'}
-        list4=['[','{','(']
-        for i in range(len1):
-            if list1[i] in list4:
+        for i in range(len(s)):
+            if list1[i] == "{" or list1[i] == "(" or list1[i] == "[":
                 list2.append(list1[i])
                 cnt += 1
                 continue
@@ -29,12 +26,3 @@ class Solution:
         if len(list2):
             return False
         return True
-
-        
-                
-            
-        
-
-            
-            
-        
