@@ -12,10 +12,8 @@ class Solution:
         for i in range(len(s)):
             if list1[i] == "{" or list1[i] == "(" or list1[i] == "[":
                 list2.append(list1[i])
-                cnt += 1
                 continue
             else:
-                cnt += 1
                 if not len(list2):
                     return False
                 else:
