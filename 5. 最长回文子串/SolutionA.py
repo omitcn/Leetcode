@@ -1,3 +1,4 @@
+#此算法有问题,不能正确处理
 class Solution:
     def longestPalindrome(self, s):
         """

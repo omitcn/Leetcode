@@ -1,4 +1,4 @@
-from SolutionA import Solution
+from SolutionB import Solution
 S=Solution()
 s = "babadada"
 print(S.longestPalindrome(s))
