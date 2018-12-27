@@ -18,3 +18,4 @@ class Solution:
                     ret += s[j + cyclelen - i]
                 j += cyclelen
         return ret
+        
