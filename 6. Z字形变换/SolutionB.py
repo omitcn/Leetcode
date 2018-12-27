@@ -10,7 +10,7 @@ class Solution:
         ret = ''
         n = len(s)
         cyclelen = 2 * numRows - 2
-        for i in range(numRows):
+        for i in range(numRows):  #从第零行开始逐行读取
             j = 0
             while i + j < n:
                 ret += s[i + j]
@@ -18,4 +18,3 @@ class Solution:
                     ret += s[j + cyclelen - i]
                 j += cyclelen
         return ret
-        
