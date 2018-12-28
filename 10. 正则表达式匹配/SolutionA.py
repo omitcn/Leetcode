@@ -5,19 +5,9 @@ class Solution:
         :type p: str
         :rtype: bool
         """
-        if (len(s) == 0 and len(p) != 0) or (len(s) != 0 and len(p) == 0):
-            return False
-        elif len(s) == 0 and len(p) == 0:
-            return True
+        if(not len(p)):
+            return True if len(s)==0 else False
+        if 1<len(p) and p[1]=='*':
+            return True if (self.isMatch(s,p[2:]) or ((len(s) and (s[0]==p[0] or p[0]=='.')) and self.isMatch(s[1:],p))) != 0 else False
         else:
-            s = list(s)
-            p = list(p)
-            i = 0
-            j = 0
-            list1=list()  
-            while i < len(s) and j < len(p):
-                if p[j] == s[i]:
-                    list1.append(s[i])
-                    i += 1
-                    j += 1
-                elif
+            return True if (len(s) and (s[0]==p[0] or p[0]=='.') and self.isMatch(s[1:],p[1:]))!=0 else False
