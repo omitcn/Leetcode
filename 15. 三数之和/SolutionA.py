@@ -4,26 +4,25 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         """
+        result = []
         nums.sort()
-        len1 = len(nums)
-        i = 0
-        j = len1 - 1
-        k = 1
-        list1 = list()
-        list2 = list()
-        while i < k and k < j:
-            while (i<k and k<j-1) and (nums[i] + nums[k] + nums[j] != 0):
-                k += 1
-            if nums[i] + nums[k] + nums[j] == 0:
-                list2 = [nums[i], nums[k], nums[j]]
-                list1.append(list2)
-                i += 1
-                while nums[j] == nums[j - 1]:
-                    j -= 1
-                k = i + 1
-            else:
-                i += 1
-                k = i + 1
-        return list1
-                
-                                  
+        for i in range(len(nums)-2):
+            if i>0 and nums[i]==nums[i-1]:
+                continue
+            j = i+1
+            k = len(nums)-1
+            while j<k:
+                temp = nums[i]+nums[j]+nums[k]
+                if temp>0:
+                    k = k-1
+                elif temp<0:
+                    j = j+1
+                else:
+                    result.append([nums[i],nums[j],nums[k]])
+                    while j<k and nums[j]==nums[j+1]:
+                        j = j+1
+                    while j<k and nums[k]==nums[k-1]:
+                        k = k-1     
+                    j = j+1
+                    k = k-1
+        return result
