@@ -1,5 +1,3 @@
-from SolutionA import Solution
-s = ['abc', 'def']
-print(*s)
-print(s)
-print('abc')
+from SolutionB import Solution
+s = '23'
+print(Solution().letterCombinations(s))
