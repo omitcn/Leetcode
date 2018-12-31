@@ -1,9 +1,6 @@
 from SolutionB import Solution
 S=Solution()
-
-
 s="mississippi"
-s="aaca"
-p="ab*a*c*a"
+p="mis*is*ip*."
 
 print(S.isMatch(s,p))
