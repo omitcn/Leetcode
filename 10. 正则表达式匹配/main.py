@@ -1,6 +1,6 @@
-from SolutionB import Solution
+from SolutionC import Solution
 S=Solution()
-s="mississippi"
-p="mis*is*ip*."
+s="a"
+p=".*..a*"
 
 print(S.isMatch(s,p))
