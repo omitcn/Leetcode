@@ -1,3 +1,4 @@
+# 暴力法求解,时间超时
 class Solution:
     def fourSum(self, nums, target):
         """
