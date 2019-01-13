@@ -1,15 +1,12 @@
 class Solution(object):
-    def titleToNumber(self, s):
+    def trailingZeroes(self, n):
         """
-        :type s: str
+        :type n: int
         :rtype: int
         """
-        dic=dict()
-        slen = len(s)-1
         res=0
-        for x in s:
-            res += (ord(x) - 64) * (26 ** slen)
-            slen -= 1
+        while n:
+            n//=5
+            res+=n
         return res
-
-            
+         
