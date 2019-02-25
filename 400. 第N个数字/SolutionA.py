@@ -13,6 +13,9 @@ class Solution:
             i += 1
         n_mod = n % i
         n = n // i + (n_mod > 0)
-        res=(10 ** (i - 1))+n-1
-        return int(str(res)[n_mod-1])
+        res = (10 ** (i - 1)) + n - 1
+        if n_mod == 0:
+            return res % 10
+        else:
+            return res//(10**(i-n_mod))%10
         
