@@ -3,7 +3,7 @@ class Solution:
         l1, l2, i = len(nums1), len(nums2), 0
         res = []
         while i < l1:
-            j = i + 1
+            j = nums2.index(nums1[i])
             while j <= l2:
                 if j == l2:
                     res.append(-1)
