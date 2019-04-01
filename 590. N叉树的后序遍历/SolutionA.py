@@ -1,12 +1,12 @@
-# ???�
+# 递归法
 class Solution:
     def __init__(self):
         self.res = []
 
-    def preorder(self, root):
+    def postorder(self, root):
         if not root:
             return []
-        self.res.append(root.val)
         for item in root.children:
-            self.preorder(item)
+            self.postorder(item)
+            self.res.append(item.val)
         return self.res
