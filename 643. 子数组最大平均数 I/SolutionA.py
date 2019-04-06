@@ -1,8 +1,3 @@
 class Solution:
-    def findMaxAverage(self, nums, k):
-        if len(nums) <= k:
-            return sum(nums)/k
-        res = [sum(nums[0:k])]
-        for i in range(k, len(nums)):
-            res.append(res[-1]-nums[i-k]+nums[k+1])
-        return max(res)/k
+    def findErrorNums(self, nums: List[int]) -> List[int]:
+        return (sum(nums)-sum(set(nums)), (1+len(nums))*len(nums)//2-sum(set(nums)))
