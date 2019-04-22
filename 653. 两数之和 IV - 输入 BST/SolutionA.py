@@ -8,14 +8,9 @@ class Solution:
         self.res = []
     def findTarget(self, root, k):
         self.Traversal(root)
-        i, j = 0, len(self.res)-1
-        while i != j:
-            if self.res[i] + self.res[j] == k:
+        for item in self.res:
+            if k-item in self.res and k-item!=item:
                 return True
-            elif self.res[i] + self.res[j] < k:
-                i += 1
-            elif self.res[i] + self.res[j] > k:
-                j -= 1
         return False
     def Traversal(self, root):
         if root:
