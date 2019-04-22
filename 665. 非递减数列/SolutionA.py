@@ -1,5 +1,5 @@
 class Solution:
-    def checkPossibility(self, nums: List[int]) -> bool:
+    def checkPossibility(self, nums):
         max_pre = nums[0]
         state = 0
         for i in range(1,len(nums)):
