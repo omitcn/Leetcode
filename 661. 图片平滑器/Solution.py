@@ -11,8 +11,7 @@ class Solution:
                 for item in tmp:
                     temp += sum(item[max(j - 1, 0) : j + 2])
                     col_n=len(item[max(j - 1, 0) : j + 2])
-                temp -= M[i][j]
-                temp = temp // (row_n*col_n-1)
+                temp = temp // (row_n*col_n)
                 l.append(temp)
             res.append(l)
         return res
