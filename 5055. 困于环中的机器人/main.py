@@ -1,0 +1,4 @@
+from SolutionA import Solution
+S=Solution()
+s = "LLLRLLLRLLGLLGGRGLLLGGLRRRRRGLRLRLRLGGRGRGRLLLLLLGLLRLGLGLRLGGGRR"
+print(S.isRobotBounded(s))
