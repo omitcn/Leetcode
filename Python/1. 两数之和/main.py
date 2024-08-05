@@ -1,4 +1,4 @@
-from SolutionB import Solution
+from SolutionC import Solution
 nums = [2, 11, 3, 7, 21]
 targets = 9
 S=Solution()
